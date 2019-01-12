@@ -7,5 +7,6 @@ cache:
 branches:
     only:
         - master
-    script:
-        - npm run build
+script:
+    - echo "skipping tests"
+    - npm run build
