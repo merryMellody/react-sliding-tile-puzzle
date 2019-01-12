@@ -16,7 +16,7 @@
         "build": "webpack",
         "precommit": "pretty-quick --staged",
         "postcommit": "git update-index -g",
-        "pretty": "prettier --write \"./**/*.{js,jsx,json,yml}\""
+        "prettify": "prettier --write \"./**/*.{js,jsx,json,yml}\""
     },
     "author": {
         "name": "AmauriAires",
