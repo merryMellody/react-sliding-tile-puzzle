@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class SlidingTilePuzzle extends React.Component {
+class SlidingTilePuzzle extends Component {
     render() {
         return <div>This is a very cool Sliding Tile Puzzle!</div>;
     }
