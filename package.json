@@ -1,6 +1,6 @@
 {
     "name": "react-sliding-tile-puzzle",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "A react sliding tile puzzle component",
     "main": "build/index.js",
     "peerDependencies": {
