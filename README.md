@@ -8,6 +8,8 @@ A Sliding Tile Puzzle!
 
 * Other algorithms will be added to this module soon. The idea is to use this kind of puzzle to compare/demonstrate various algorithms.
 
+\* The use of images (as tiles) will be implemented soon. 
+
 **Installation**
 
 ```
