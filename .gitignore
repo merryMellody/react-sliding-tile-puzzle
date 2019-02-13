@@ -1,5 +1,6 @@
 # dependencies
-/node_modules
+/module/node_modules
+/sample/node_modules
 
 # production
-/build
+/module/build
