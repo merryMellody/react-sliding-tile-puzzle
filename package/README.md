@@ -10,6 +10,10 @@ A Sliding Tile Puzzle!
 
 \* The use of images (as tiles) will be implemented soon.
 
+**Demo**
+
+http://AmauriAires.github.io/react-sliding-tile-puzzle-sample
+
 **Installation**
 
 ```
