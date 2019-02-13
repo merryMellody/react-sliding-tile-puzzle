@@ -7,7 +7,8 @@ cache:
 branches:
   only:
     - master
-before_script: cd module
+before_script:
+  - cd module
 script:
   - echo "skipping tests"
   - npm run build
