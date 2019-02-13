@@ -2,11 +2,11 @@
 
 A Sliding Tile Puzzle!
 
--   react-sliding-tile-puzzle makes use of AI to find a solution to the puzzle.
+- react-sliding-tile-puzzle makes use of AI to find a solution to the puzzle.
 
--   AI algorithm: A<sup>\*</sup> with cost function = min(f(x)), where f(x) = h(x) + g(x), h(x) = manhattan distance and g(h) = height of tree.
+- AI algorithm: A<sup>\*</sup> with cost function = min(f(x)), where f(x) = h(x) + g(x), h(x) = manhattan distance and g(h) = height of tree.
 
--   Other algorithms will be added to this module soon. The idea is to use this kind of puzzle to compare/demonstrate various algorithms.
+- Other algorithms will be added to this module soon. The idea is to use this kind of puzzle to compare/demonstrate various algorithms.
 
 \* The use of images (as tiles) will be implemented soon.
 
