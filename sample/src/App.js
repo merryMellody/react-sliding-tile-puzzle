@@ -42,7 +42,7 @@ class App extends Component {
               <SlidingTilePuzzle
                 solvePuzzle={this.state.solvePuzzle}
                 newPuzzle={this.state.newPuzzle}
-                maxIterations={100}
+                maxIterations={300}
               />
             </Segment>
           </Segment.Group>
