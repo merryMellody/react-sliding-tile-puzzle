@@ -1,7 +1,16 @@
 {
     "name": "react-sliding-tile-puzzle",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A react sliding tile puzzle component",
+    "keywords": [
+        "react",
+        "sliding",
+        "tile",
+        "puzzle",
+        "AI"
+    ],
+    "homepage": "https://github.com/AmauriAires/react-sliding-tile-puzzle/blob/master/README.md",
+    "license": "MIT",
     "main": "build/index.js",
     "peerDependencies": {
         "react": "^15.5.4"
