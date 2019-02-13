@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+    - master
+script:
+  - echo "skipping tests"
+  - cd module && npm run build
