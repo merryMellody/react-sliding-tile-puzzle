@@ -12,7 +12,7 @@ before_install:
 script:
   - echo "skipping tests"
   - npm run build
-before_deployment:
+before_deploy:
   - cd ../sample
 deploy:
   provider: script
