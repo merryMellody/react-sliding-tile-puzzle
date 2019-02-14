@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-sliding-tile-puzzle/sample/precache-manifest.108dbe13e741ff9b9e84d3e3b1b70dac.js"
+  "/react-sliding-tile-puzzle-sample/precache-manifest.7fe8c03533b1798dec2c81168a5efa1f.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/react-sliding-tile-puzzle/sample/index.html", {
+workbox.routing.registerNavigationRoute("/react-sliding-tile-puzzle-sample/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

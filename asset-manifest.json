@@ -1,13 +1,13 @@
 {
-  "main.css": "/react-sliding-tile-puzzle/sample/static/css/main.74f127ba.chunk.css",
-  "main.js": "/react-sliding-tile-puzzle/sample/static/js/main.fb5c67fc.chunk.js",
-  "main.js.map": "/react-sliding-tile-puzzle/sample/static/js/main.fb5c67fc.chunk.js.map",
-  "static/js/1.67cfc30b.chunk.js": "/react-sliding-tile-puzzle/sample/static/js/1.67cfc30b.chunk.js",
-  "static/js/1.67cfc30b.chunk.js.map": "/react-sliding-tile-puzzle/sample/static/js/1.67cfc30b.chunk.js.map",
-  "runtime~main.js": "/react-sliding-tile-puzzle/sample/static/js/runtime~main.91fb3e17.js",
-  "runtime~main.js.map": "/react-sliding-tile-puzzle/sample/static/js/runtime~main.91fb3e17.js.map",
-  "static/css/main.74f127ba.chunk.css.map": "/react-sliding-tile-puzzle/sample/static/css/main.74f127ba.chunk.css.map",
-  "index.html": "/react-sliding-tile-puzzle/sample/index.html",
-  "precache-manifest.108dbe13e741ff9b9e84d3e3b1b70dac.js": "/react-sliding-tile-puzzle/sample/precache-manifest.108dbe13e741ff9b9e84d3e3b1b70dac.js",
-  "service-worker.js": "/react-sliding-tile-puzzle/sample/service-worker.js"
+  "main.css": "/react-sliding-tile-puzzle-sample/static/css/main.74f127ba.chunk.css",
+  "main.js": "/react-sliding-tile-puzzle-sample/static/js/main.ba62cb87.chunk.js",
+  "main.js.map": "/react-sliding-tile-puzzle-sample/static/js/main.ba62cb87.chunk.js.map",
+  "static/js/1.67cfc30b.chunk.js": "/react-sliding-tile-puzzle-sample/static/js/1.67cfc30b.chunk.js",
+  "static/js/1.67cfc30b.chunk.js.map": "/react-sliding-tile-puzzle-sample/static/js/1.67cfc30b.chunk.js.map",
+  "runtime~main.js": "/react-sliding-tile-puzzle-sample/static/js/runtime~main.6a8ea889.js",
+  "runtime~main.js.map": "/react-sliding-tile-puzzle-sample/static/js/runtime~main.6a8ea889.js.map",
+  "static/css/main.74f127ba.chunk.css.map": "/react-sliding-tile-puzzle-sample/static/css/main.74f127ba.chunk.css.map",
+  "index.html": "/react-sliding-tile-puzzle-sample/index.html",
+  "precache-manifest.7fe8c03533b1798dec2c81168a5efa1f.js": "/react-sliding-tile-puzzle-sample/precache-manifest.7fe8c03533b1798dec2c81168a5efa1f.js",
+  "service-worker.js": "/react-sliding-tile-puzzle-sample/service-worker.js"
 }
