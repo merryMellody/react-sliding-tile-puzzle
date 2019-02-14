@@ -1,8 +1,0 @@
-# dependencies
-/package/node_modules
-/package/build
-/sample/node_modules
-/sample/build
-
-# production
-/module/build
