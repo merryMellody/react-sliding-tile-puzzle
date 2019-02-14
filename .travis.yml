@@ -13,7 +13,7 @@ script:
   - echo "skipping tests"
   - npm run build
 before_deploy:
-  - cd ../sample && rm package-lock-json && npm ci
+  - cd ../sample && npm ci
 deploy:
   provider: script
   script: npm run deploy
