@@ -13,7 +13,7 @@ script:
   - echo "skipping tests"
   - npm run build
 before_deploy:
-  - cd ../sample && npm i
+  - cd ../sample && npm i && git config --global user.email amauriairesfilho@gmail.com && git config --global user.name "AmauriAires"
 deploy:
   provider: script
   script: npm run deploy
