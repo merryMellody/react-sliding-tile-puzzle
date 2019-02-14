@@ -28,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "babel-loader": "8.0.4"
   }
 }
