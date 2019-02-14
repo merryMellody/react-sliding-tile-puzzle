@@ -13,11 +13,13 @@ script:
   - echo "skipping tests"
   - npm run build
 before_deployment:
-  - cd .. && cd sample
+  - cd ../sample
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: ydhmTcuJ0QpZN2qEkiN3hw # Set in the settings page of your repository, as a secure variable
   keep-history: true
   on:
-    branch: gh-pages
+    branches:
+      only:
+        - gh-pages
