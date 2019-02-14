@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         <Segment.Group>
-          <Segment>Slidding Tile Puzzle</Segment>
+          <Segment>Sliding Tile Puzzle</Segment>
           <Segment.Group horizontal>
             <Segment.Group vertical="true">
               <Segment>
