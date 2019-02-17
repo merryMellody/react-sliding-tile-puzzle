@@ -1,7 +1,7 @@
 {
   "name": "react-sliding-tile-puzzle-sample",
   "version": "0.1.0",
-  "homepage": "http://AmauriAires.github.io/react-sliding-tile-puzzle-sample",
+  "homepage": "http://AmauriAires.github.io/react-sliding-tile-puzzle",
   "private": true,
   "dependencies": {
     "react": "^16.7.0",
