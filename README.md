@@ -12,7 +12,7 @@ A Sliding Tile Puzzle!
 
 **Demo**
 
-http://AmauriAires.github.io/react-sliding-tile-puzzle-sample
+http://AmauriAires.github.io/react-sliding-tile-puzzle
 
 **Installation**
 
