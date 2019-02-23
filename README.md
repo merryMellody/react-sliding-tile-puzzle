@@ -27,7 +27,7 @@ npm install react-sliding-tile-puzzle --save
 | solvePuzzle   | bool   | optional    |               | Tells AI algorithm to solve puzzle.                                    |
 | newPuzzle     | bool   | optional    |               | Tells component to create a new puzzle. Suffle pattern board.          |
 | maxIterations | number | optional    | 50            | Max number of tile moves allowed for AI algorithm to solve the puzzle. |
-| image         | number | required    |               | Image for tiles                                                        |
+| image         | string | required    |               | Image for tiles                                                        |
 | size          | number | required    |               | Puzzle dimensions (height x width = size x size ) in px                |
 
 **Usage**
