@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
-import { Button, Grid, Table } from 'semantic-ui-react';
+import _ from 'lodash';
 import '../semantic/semantic.min.css';
 import * as PuzzleUtil from './puzzleUtil';
-import Keygen from 'keygenerator';
+import { Clickable } from 'react-clickable';
 
 class SlidingTilePuzzle extends Component {
     constructor(props) {
         super(props);
         const [blankElement, newArr] = this.generatePuzzle({ x: 2, y: 2 }, [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, ''],
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, ''],
         ]);
         this.state = {
+            isOver: false,
             isSolvingPuzzle: false,
             newPuzzle: false,
-            patternBoard: [[1, 2, 3], [4, 5, 6], [7, 8, '']],
+            patternBoard: [[0, 1, 2], [3, 4, 5], [6, 7, '']],
             shuffledBoard: newArr,
             blankElement: blankElement,
         };
@@ -74,13 +75,14 @@ class SlidingTilePuzzle extends Component {
         curArr
     ) => {
         if (PuzzleUtil.manhattanCost(goalArr, curArr) === 0) {
-            this.setState({ isSolvingPuzzle: false });
+            this.setState({ isOver: true, isSolvingPuzzle: false });
+            console.log(JSON.stringify(curArr));
             return root;
         } else if (maxSteps === root + 1) {
             this.setState({ isSolvingPuzzle: false });
             return `Could not solve puzzle in ${maxSteps} iterations.`;
         }
-
+        console.log(JSON.stringify(curArr));
         try {
             const [up, movedUP] = PuzzleUtil.moveUp(blankElement, curArr);
             const [down, movedDOWN] = PuzzleUtil.moveDown(blankElement, curArr);
@@ -177,11 +179,12 @@ class SlidingTilePuzzle extends Component {
 
         if (prevProps.newPuzzle !== this.props.newPuzzle) {
             const [blankElement, newArr] = this.generatePuzzle({ x: 2, y: 2 }, [
-                [1, 2, 3],
-                [4, 5, 6],
-                [7, 8, ''],
+                [0, 1, 2],
+                [3, 4, 5],
+                [6, 7, ''],
             ]);
             this.setState({
+                isOver: false,
                 shuffledBoard: newArr,
                 blankElement: blankElement,
             });
@@ -225,26 +228,48 @@ class SlidingTilePuzzle extends Component {
         }
     };
 
+    renderSquares() {
+        const { image, size, level } = this.props;
+        const positions = this.state.shuffledBoard;
+
+        const squares = positions.map((arr, y) => {
+            return arr.map((element, x) => {
+                return (
+                    <Clickable
+                        key={element}
+                        onClick={this.handleClick({ x, y })}
+                    >
+                        <PuzzleUtil.Cell
+                            key={element}
+                            size={size}
+                            image={image}
+                            level={3}
+                            position={element}
+                            max={_.flatten(this.state.patternBoard).length - 1}
+                            isOver={this.state.isOver}
+                        />
+                    </Clickable>
+                );
+            });
+        });
+
+        return _.flatten(squares);
+    }
+
     render() {
+        const size = this.props.size;
+
         return (
-            <div>
-                <Table unstackable celled textAlign={'center'}>
-                    <Table.Header key={Keygen.number()}>
-                        {this.state.shuffledBoard.map((arr, y) => (
-                            <Table.Row key={Keygen.number()}>
-                                {arr.map((element, x) => (
-                                    <Table.HeaderCell
-                                        collapsing
-                                        key={Keygen.number()}
-                                        onClick={this.handleClick({ x, y })}
-                                    >
-                                        {element}
-                                    </Table.HeaderCell>
-                                ))}
-                            </Table.Row>
-                        ))}
-                    </Table.Header>
-                </Table>
+            <div
+                style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    padding: 0,
+                    width: `${size}px`,
+                    height: `${size}px`,
+                }}
+            >
+                {this.renderSquares()}
             </div>
         );
     }

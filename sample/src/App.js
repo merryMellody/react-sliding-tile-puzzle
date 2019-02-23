@@ -43,6 +43,8 @@ class App extends Component {
                 solvePuzzle={this.state.solvePuzzle}
                 newPuzzle={this.state.newPuzzle}
                 maxIterations={300}
+                image="serenity-mitchell-1163490-unsplash.jpg"
+                size={130}
               />
             </Segment>
           </Segment.Group>

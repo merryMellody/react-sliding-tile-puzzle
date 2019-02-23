@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+
 const sleep = milliseconds =>
     new Promise(resolve => setTimeout(resolve, milliseconds));
 
@@ -82,4 +84,64 @@ const moveRight = (blankElement, curArr) => {
     return [newCurArr, moved];
 };
 
-export { sleep, manhattanCost, moves, moveUp, moveDown, moveLeft, moveRight };
+const Piece = props => {
+    const { image, size, side, x, y, blankElement, isOver } = props;
+
+    return (
+        <div
+            style={{
+                width: `${side}px`,
+                height: `${side}px`,
+                margin: '0 -1px -1px',
+                border: '1px solid black',
+                backgroundImage: `url(${image})`,
+                backgroundSize: `${size}px ${size}px`,
+                backgroundPosition: `-${x}px -${y}px`,
+                opacity: `${isOver || !blankElement ? '1' : '0.2'}`,
+                cursor: `${blankElement ? 'default' : 'hover'}`,
+            }}
+        />
+    );
+};
+
+const Cell = props => {
+    const { image, size, level, position, max, isOver } = props;
+    const side = size / level;
+    const blankElement = position === '';
+    const pos = blankElement ? max : position;
+    const x = (pos % level) * side;
+    const y = Math.floor(pos / level) * side;
+
+    return (
+        <div className="piece">
+            <Piece
+                position={pos}
+                image={image}
+                size={size}
+                side={side}
+                x={x}
+                y={y}
+                blankElement={blankElement}
+                isOver={isOver}
+            />
+
+            <style>{`
+          .piece:hover {
+            opacity: 0.8;
+          }
+        `}</style>
+        </div>
+    );
+};
+
+export {
+    sleep,
+    manhattanCost,
+    moves,
+    moveUp,
+    moveDown,
+    moveLeft,
+    moveRight,
+    Cell,
+    Piece,
+};
