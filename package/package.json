@@ -1,6 +1,6 @@
 {
-    "name": "react-sliding-tile-puzzle",
-    "version": "1.0.5",
+    "name": "@merrymellody/react-sliding-tile-puzzle",
+    "version": "1.0.6",
     "description": "A react sliding tile puzzle component",
     "keywords": [
         "react",
@@ -9,7 +9,7 @@
         "puzzle",
         "AI"
     ],
-    "homepage": "https://github.com/AmauriAires/react-sliding-tile-puzzle/blob/master/README.md",
+    "homepage": "https://github.com/merryMellody/react-sliding-tile-puzzle/blob/master/README.md",
     "license": "MIT",
     "main": "build/index.js",
     "peerDependencies": {
@@ -37,6 +37,12 @@
         "name": "AmauriAires",
         "email": "amauriairesfilho@gmail.com"
     },
+    "contributors": [
+        {
+            "name": "merryMellody",
+            "email": "merry@mello.codes"
+        }
+    ],
     "devDependencies": {
         "babel-core": "^6.21.0",
         "babel-loader": "^7.1.4",

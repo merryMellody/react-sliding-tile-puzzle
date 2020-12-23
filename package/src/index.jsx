@@ -74,8 +74,10 @@ class SlidingTilePuzzle extends Component {
         blankElement,
         curArr
     ) => {
+        const onPuzzleSolved = this.props.onPuzzleSolved;
         if (PuzzleUtil.manhattanCost(goalArr, curArr) === 0) {
             this.setState({ isOver: true, isSolvingPuzzle: false });
+            onPuzzleSolved();
             console.log(JSON.stringify(curArr));
             return root;
         } else if (maxSteps === root + 1) {
