@@ -227,13 +227,13 @@ class SlidingTilePuzzle extends Component {
         );
         if (moved) {
             this.setState({ shuffledBoard: newCurArr, blankElement: param });
+        }
 
-            if (PuzzleUtil.manhattanCost(goalArr, curArr) === 0) {
-                this.setState({ isOver: true, isSolvingPuzzle: false });
-                onPuzzleSolved();
-                console.log(JSON.stringify(curArr));
-                return root;
-            }
+        if (PuzzleUtil.manhattanCost(goalArr, curArr) === 0) {
+            this.setState({ isOver: true, isSolvingPuzzle: false });
+            onPuzzleSolved();
+            console.log(JSON.stringify(curArr));
+            return root;
         }
     };
 
