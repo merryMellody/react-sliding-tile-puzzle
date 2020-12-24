@@ -229,7 +229,7 @@ class SlidingTilePuzzle extends Component {
             this.setState({ shuffledBoard: newCurArr, blankElement: param });
         }
 
-        if (PuzzleUtil.manhattanCost(goalArr, curArr) === 0) {
+        if (PuzzleUtil.manhattanCost(this.state.patternBoard, curArr) === 0) {
             this.setState({ isOver: true, isSolvingPuzzle: false });
             onPuzzleSolved();
             console.log(JSON.stringify(curArr));
