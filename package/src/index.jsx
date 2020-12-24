@@ -220,6 +220,7 @@ class SlidingTilePuzzle extends Component {
     };
 
     handleClick = param => e => {
+        const { onPuzzleSolved } = this.props;
         const [newCurArr, moved] = this.moveCurrentTile(
             param,
             this.state.blankElement,
