@@ -145,7 +145,7 @@ class SlidingTilePuzzle extends Component {
                     break;
             }
 
-            PuzzleUtil.sleep(500).then(() => {
+            PuzzleUtil.sleep(this.props.puzzleSleep || 500).then(() => {
                 this.setState({ shuffledBoard: newCurArr, blankElement: pos });
                 return this.solvePuzzle(
                     goalArr,
