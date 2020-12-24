@@ -220,7 +220,6 @@ class SlidingTilePuzzle extends Component {
     };
 
     handleClick = param => e => {
-        const { onPuzzleSolved } = this.props;
         const [newCurArr, moved] = this.moveCurrentTile(
             param,
             this.state.blankElement,
@@ -229,21 +228,10 @@ class SlidingTilePuzzle extends Component {
         if (moved) {
             this.setState({ shuffledBoard: newCurArr, blankElement: param });
         }
-
-        if (
-            PuzzleUtil.manhattanCost(
-                this.state.patternBoard,
-                this.state.shuffledBoard
-            ) === 0
-        ) {
-            this.setState({ isOver: true, isSolvingPuzzle: false });
-            onPuzzleSolved();
-            console.log(JSON.stringify(curArr));
-            return root;
-        }
     };
 
     renderSquares() {
+        const { onPuzzleSolved } = this.props;
         const { image, size, level } = this.props;
         const positions = this.state.shuffledBoard;
 
@@ -267,6 +255,18 @@ class SlidingTilePuzzle extends Component {
                 );
             });
         });
+
+        if (
+            PuzzleUtil.manhattanCost(
+                this.state.patternBoard,
+                this.state.shuffledBoard
+            ) === 0
+        ) {
+            this.setState({ isOver: true, isSolvingPuzzle: false });
+            onPuzzleSolved();
+            console.log(JSON.stringify(this.state.shuffledBoard));
+            return root;
+        }
 
         return _.flatten(squares);
     }
