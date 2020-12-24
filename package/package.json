@@ -1,6 +1,6 @@
 {
     "name": "@merrymellody/react-sliding-tile-puzzle",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "description": "A react sliding tile puzzle component",
     "keywords": [
         "react",
